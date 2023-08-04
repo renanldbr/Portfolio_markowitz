@@ -56,6 +56,8 @@ Ao combinar os insights fornecidos pelo K-Means e a Teoria da Fronteira Eficient
 
 #app
 app = Dash(__name__, external_stylesheets=[dbc.themes.JOURNAL])
+server = app.server
+
 load_figure_template('minty')
 
 data_f = datetime.today().strftime('%Y-%m-%d')
@@ -333,4 +335,4 @@ def att_grafico(data_inicial, data_final, empresas_selecionadas):
    
 #server
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
